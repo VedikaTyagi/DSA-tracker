@@ -1,0 +1,11 @@
+void MoveNode(Node** destRef, Node** sourceRef)
+{
+    Node* newNode = *sourceRef;
+    assert(newNode != NULL);
+ 
+    *sourceRef = newNode->next;
+ 
+    newNode->next = *destRef;
+ 
+    *destRef = newNode;
+}
